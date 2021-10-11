@@ -12,7 +12,7 @@ export const FormStep3 = () => {
 
   const handleNextStep = () => {
     if (state.email !== "" && state.github !== "") {
-      console.log(state);
+      push('/resume')
     } else {
       alert("Por favor, preencha os dados!");
     }
@@ -59,10 +59,12 @@ export const FormStep3 = () => {
           />
         </label>
 
-        <Button outline onClick={() => push("/step2")}>
-          Voltar
-        </Button>
-        <Button onClick={handleNextStep}>Finalizar Cadastro</Button>
+        <C.Buttons>
+          <Button outline onClick={() => push("/step2")}>
+            Voltar
+          </Button>
+          <Button onClick={handleNextStep}>Finalizar Cadastro</Button>
+        </C.Buttons>
       </C.Container>
     </Theme>
   );
