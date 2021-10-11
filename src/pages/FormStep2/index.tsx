@@ -8,11 +8,12 @@ import * as C from "./styles";
 
 export const FormStep2 = () => {
   const history = useHistory();
+  const { push } = history;
   const { state, dispatch } = useForm();
 
   const handleNextStep = () => {
     if (state.name !== "") {
-      history.push("/step3");
+      push("/step3");
     } else {
       alert("Preencha os campos!");
     }
@@ -24,11 +25,11 @@ export const FormStep2 = () => {
 
   useEffect(() => {
     if (state.name === "") {
-      history.push("/");
+      push("/");
     } else {
       dispatch({ type: FormActions.setCurrentStep, payload: 2 });
     }
-  }, [dispatch, history, state.name]);
+  }, [dispatch, push, state.name]);
 
   return (
     <Theme>
@@ -59,7 +60,7 @@ export const FormStep2 = () => {
         />
 
         <C.Buttons>
-          <Button outline onClick={() => history.push("/")}>
+          <Button outline onClick={() => push("/")}>
             Voltar
           </Button>
           <Button onClick={handleNextStep}>Próximo</Button>
