@@ -30,7 +30,7 @@ export const Description = styled.div`
   color: #b8b8d4;
 `;
 
-export const IconArea = styled.div`
+export const IconArea = styled.div<{ selected: boolean }>`
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -38,14 +38,20 @@ export const IconArea = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  background-color: ${({ selected }) => (selected ? "#25cd89" : "")};
+
+  svg {
+    color: #ffffff;
+  }
 `;
 
-export const Point = styled.div`
+export const Point = styled.div<{ selected: boolean }>`
   width: 6px;
   height: 6px;
   border: 3px solid #494a7c;
   border-radius: 50%;
   margin-left: 30px;
   margin-right: -6px;
-  background-color: #02044a;
-  `;
+  background-color: ${({ selected }) => (selected ? "#25cd89" : "#02044a")};
+`;
