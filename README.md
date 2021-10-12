@@ -2,7 +2,7 @@
 
 Esse projeto tem como objetivo criar um formulário de multi etapas usando as principais tecnologias no ecossistema ReactJS.
 
-Neste projeto foi usada as seguintes tecnologias:
+Neste projeto foram usadas as seguintes tecnologias:
 
 - React;
 - React Context API
