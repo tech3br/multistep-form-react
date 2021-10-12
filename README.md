@@ -12,6 +12,10 @@ Neste projeto foi usada as seguintes tecnologias:
 - Jest;
 - Styled Components;
 
+## URL para acessar:
+
+[Acessar na internet](https://tech3-multistep-form.netlify.app)
+
 ## Scripts Disponíveis
 
 Na pasta raíz do projeto, você pode rodar:
