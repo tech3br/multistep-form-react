@@ -2,9 +2,9 @@ import { ReactNode } from "react";
 
 import * as C from "./styles";
 
-interface ButtonProps {
+export interface ButtonProps {
   children: ReactNode;
-  onClick: () => void;
+  onClick?: () => void;
   outline?: boolean;
   rest?: any;
 }
